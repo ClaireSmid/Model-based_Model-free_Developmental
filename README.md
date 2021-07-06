@@ -84,7 +84,11 @@ package in R.
 In the 'k-fold_Cross_Validation' folder, scripts are included to check how well both models performed. The script containing 'CLUSTER' in the title is adapted
 to be run on a computing cluster.
 
-The final statistical results and the graphs published in the paper have been analysed and created using R. 
+	Step 7. Analyses with R
+In the 'R_scripts' folder, the R scripts used to recreate the main analyses of the paper are included. the 'GLM_model_selection' script includes the generalised linear
+model analysis for the stay probabilities, and the model selection used to find the winning model for both children and adults.
+
+The 'All_plots' script contains the code to recreate the main plots used in the paper.  
 
 ## References
 
