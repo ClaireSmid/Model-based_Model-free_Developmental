@@ -19,6 +19,11 @@ This code is mainly based on the code provided by Wouter Kool, e.g. Kool et al. 
 
 Follow the steps below to recreate the analysis as reported. For any questions, please email to: claire.smid.17@ucl.ac.uk or claire.r.smid@gmail.com
 
+## Task
+The current task was based on the format from Kool et al. 2016 and Kool et al. 2017. Stimuli for this task has been developed and shared previously by the authors of 'From Creatures of Habit to goal-directed learners' by Decker et al. 2016: https://pubmed.ncbi.nlm.nih.gov/27084852/
+
+## Analysis
+
 	Step 1. Combining data files.
 Run the script 'Step1_combine_group_data.m' to create two combined data files for the children and adult data. The resulting data files will be 'adultgroupdata.mat' and
 'kidgroupdata.mat' and will be saved in the current folder. The function will also output two log files, named 'kidlog.mat' and 'adultlog.mat'. These
@@ -79,6 +84,8 @@ to be run on a computing cluster.
 The final statistical results and the graphs published in the paper have been analysed and created using R. 
 
 References
+
+Decker, J. H., Otto, A. R., Daw, N. D., & Hartley, C. A. (2016). From creatures of habit to goal-directed learners: Tracking the developmental emergence of model-based reinforcement learning. Psychological science, 27(6), 848-858.
 
 Kool, W., Cushman, F. A., & Gershman, S. J. (2016). When does model-based control pay off?. PLoS computational biology, 12(8), e1005090.
 
