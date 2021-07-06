@@ -1,16 +1,11 @@
 %% Stay Probability script
 
-function groupdata = Get_Stay_Probabilities(data,results,m)
+function groupdata = Get_Stay_Probabilities(data,m)
 % this is based on Wouter's script from 2016
-
-for z = 1:length(results)
-    results(z).id = str2double(results(z).id);
-end
 
 nrsubs = length(data.subdata);
 
 groupdata.subdata = data.subdata;
-groupdata.fits = results;
 
 T = [];
 C = [];

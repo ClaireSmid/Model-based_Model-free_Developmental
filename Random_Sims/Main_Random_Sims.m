@@ -16,7 +16,6 @@ rng shuffle
 % reward rates
 % for each participant. as well as the stimuli
 
-% load groupdata_allKids.mat
 
 %% Model 0. Random responding
 Model0_Sim_M = [];
@@ -37,7 +36,9 @@ for sub = 1:PPs
     fprintf('Now on random sub: %d\n', sub)
 
     % get true rewards and trials for each subject
+    
     Trews = mix(sub).rews; % = trials, differs, depends on rewards
+    
     % include timeouts - else randoms get more tries
     Missed = mix(sub).timeout;
     Trials = length(Trews);
@@ -46,7 +47,7 @@ for sub = 1:PPs
     for tt = 1:Nrits
 
         % make random simulation
-        [AA, RR, RWR, MSS] = Sim_Model_0_Random_Claire(Trials,Trews,Missed);
+        [AA, RR, RWR, MSS] = Sim_Model_0_Random(Trials,Trews,Missed);
 
         % save results
         Model0_Sim(tt).sub = sub;
@@ -58,21 +59,15 @@ for sub = 1:PPs
 
     end
     
-    
-    
+    % save outputs
     Model0_Sim_M(sub).id = mix(sub).id;
     Model0_Sim_M(sub).actual_Avg_Pts = kidgroupdata.points(sub);
     Model0_Sim_M(sub).check_actual_Avg_Pts = mean([Model0_Sim.Real_Pts]);
-%     Model0_Sim_M(sub).Random_Avg_Pts = mean([Model0_Sim.Avg_Pts]);
     Model0_Sim_M(sub).Random_Kool_Pts = mean([Model0_Sim.Kool_Pts]);
     
 end
 
 
 save Model0_Sim_M.mat Model0_Sim_M
-
 T = struct2table(Model0_Sim_M);
-
-addpath('../Final_Files_for_Analysis/');
-
-writetable(T,'../Final_Files_for_Analysis/RandomSims_Performance_12Oct20.csv','Delimiter',',');
+writetable(T,'../RandomSims_Performance.csv','Delimiter',',');

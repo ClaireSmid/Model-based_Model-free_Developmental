@@ -25,19 +25,13 @@ for sample = 1:2
             
             % for the P6 model
             if m == 1
-%                 disp('skip')
 
-                % get their model results
-                load('../RL_6ParamsModel_and_Sims/kidsresults_P6_2Oct20.mat');
-
-                % get their stay probabilities, and fit the regression
-                % model
-                groupdata = Get_Stay_Probabilities(groupdata_I,kidresults,m);
+                % get their stay probabilities
+                groupdata = Get_Stay_Probabilities(groupdata_I,m);
 
                 % save their data
                 save Stay_Prob_Kids_P6_full.mat groupdata
-                writetable(groupdata.table,'../Final_Files_for_Analysis/Stay_Prob_Kids_modelPEs_P6.csv','Delimiter',',')
-                writetable(groupdata.Com,'../Final_Files_for_Analysis/W_component_Kids_modelPEs_P6.csv','Delimiter',',')
+                writetable(groupdata.table,'../Stay_Prob_Kids_P6.csv','Delimiter',',')
                 fprintf('saving data from model %d...\n\n', m)
 
                 % clear it
@@ -45,17 +39,12 @@ for sample = 1:2
 
             elseif m == 2
                 
-                % get their model results
-                load('../RL_7ParamsModel_and_Sims/kidsresults_P7_2Oct20.mat');
-
-                % get their stay probabilities, and fit the regression
-                % model
-                groupdata = Get_Stay_Probabilities(groupdata_I,kidresults,m);
+                % get their stay probabilities
+                groupdata = Get_Stay_Probabilities(groupdata_I,m);
 
                 % save their data
                 save Stay_Prob_Kids_P7_full.mat groupdata
-                writetable(groupdata.table,'../Final_Files_for_Analysis/Stay_Prob_Kids_modelPEs_P7.csv','Delimiter',',')
-                writetable(groupdata.Com,'../Final_Files_for_Analysis/W_component_Kids_modelPEs_P7.csv','Delimiter',',')
+                writetable(groupdata.table,'../Stay_Prob_Kids_P7.csv','Delimiter',',')
                 fprintf('saving data from model %d...\n\n', m)
 
                 % clear it
@@ -80,38 +69,26 @@ for sample = 1:2
 
             % for the P6 model
             if m == 1
-                
-%                 disp('skip')
 
-                % get their model results
-                load('../RL_6ParamsModel_and_Sims/adltresults_P6_2Oct20.mat');
-
-                % get their stay probabilities, and fit the regression
-                % model
-                groupdata = Get_Stay_Probabilities(groupdata_I,adltresults,m);
+                % get their stay probabilities
+                groupdata = Get_Stay_Probabilities(groupdata_I,m);
 
                 % save their data
                 save Stay_Prob_Adults_P6_full.mat groupdata
-                writetable(groupdata.table,'../Final_Files_for_Analysis/Stay_Prob_Adults_modelPEs_P6.csv','Delimiter',',')
-                writetable(groupdata.Com,'../Final_Files_for_Analysis/W_component_Adlts_modelPEs_P6.csv','Delimiter',',')
+                writetable(groupdata.table,'../Stay_Prob_Adults_P6.csv','Delimiter',',')
                 fprintf('saving data from model %d...\n\n', m)
 
                 % clear it
                 clear groupdata
     
             elseif m == 2
-                
-                % get their model results
-                load('../RL_7ParamsModel_and_Sims/adltresults_P7_2Oct20.mat');
 
-                % get their stay probabilities, and fit the regression
-                % model
-                groupdata = Get_Stay_Probabilities(groupdata_I,adltresults,m);
+                % get their stay probabilities
+                groupdata = Get_Stay_Probabilities(groupdata_I,m);
 
                 % save their data
                 save Stay_Prob_Adults_P7_full.mat groupdata
-                writetable(groupdata.table,'../Final_Files_for_Analysis/Stay_Prob_Adults_modelPEs_P7.csv','Delimiter',',')
-                writetable(groupdata.Com,'../Final_Files_for_Analysis/W_component_Adlts_modelPEs_P7.csv','Delimiter',',')
+                writetable(groupdata.table,'../Stay_Prob_Adults_P7.csv','Delimiter',',')
                 fprintf('saving data from model %d...\n\n', m)
 
             end
