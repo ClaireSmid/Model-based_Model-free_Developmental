@@ -1,4 +1,4 @@
-READ ME
+## READ ME
 
 Languages: Matlab and R
 
@@ -21,6 +21,9 @@ Follow the steps below to recreate the analysis as reported. For any questions, 
 
 ## Task
 The current task was based on the format from Kool et al. 2016 and Kool et al. 2017. Stimuli for this task has been developed and shared previously by the authors of 'From Creatures of Habit to goal-directed learners' by Decker et al. 2016: https://pubmed.ncbi.nlm.nih.gov/27084852/
+
+## Data
+The data for the 114 children and 24 adults is included in the 'data' folder. 
 
 ## Analysis
 
@@ -83,7 +86,7 @@ to be run on a computing cluster.
 
 The final statistical results and the graphs published in the paper have been analysed and created using R. 
 
-References
+## References
 
 Decker, J. H., Otto, A. R., Daw, N. D., & Hartley, C. A. (2016). From creatures of habit to goal-directed learners: Tracking the developmental emergence of model-based reinforcement learning. Psychological science, 27(6), 848-858.
 
