@@ -10,7 +10,7 @@ UPDATE: Claire Smid, 17 September 2020 : added k-fold information
 
 UPDATE: Claire Smid, 8 April 2021 : added parameter recovery information and folders
 
-UPDATE: Claire Smid, 6 July 2021 : we now use gamma, beta and normal priors in the model-fitting, as opposed to using uniform priors previously. In addition, rewards were enteredas their absolute value of points (0-9) rather than scaled down to be between 0 and 1 as was done previously. This was mainly done to improve the reliability of recovering the parameters in the model, and to avoid pooling at the bounds as we saw in earlier versions.
+UPDATE: Claire Smid, 6 July 2021 : we now use gamma, beta and normal priors in the model-fitting, as opposed to using uniform priors previously. In addition, rewards were entered as their absolute value of points (0-9) rather than scaled down to be between 0 and 1 as was done previously. This was mainly done to improve the reliability of recovering the parameters in the model, and to avoid pooling at the bounds as we saw in earlier versions.
 
 This is the main folder to replicate the computational modelling executed in the model-based/model-free developmental publication. Preprint on PsychArxiv: https://psyarxiv.com/ervsb/
 by Claire Smid, Wouter Kool, Tobias Hauser and Nikolaus Steinbeis. 
