@@ -43,9 +43,6 @@ Stay_kids_P7_age$Age_z <- scale(Stay_kids_P7_age$Age_frac, center = TRUE, scale 
 # this will create a centered variable
 Stay_kids_P7_age$Age_c <- scale(Stay_kids_P7_age$Age_frac, center = TRUE, scale = FALSE)
 
-# Split into younger and older children
-Stay_P7_Yng_Kids <- Stay_kids_P7_age[which (Stay_kids_P7_age$Median_Age_Split==0),]
-Stay_P7_Old_Kids <- Stay_kids_P7_age[which (Stay_kids_P7_age$Median_Age_Split==1),]
 
 #install.packages('boot')
 library(boot)
